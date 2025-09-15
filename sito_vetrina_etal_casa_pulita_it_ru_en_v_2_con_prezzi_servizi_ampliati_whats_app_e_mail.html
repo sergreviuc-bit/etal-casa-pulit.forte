@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ETAL CASA PULITA — Cleaning & Services | Forte dei Marmi · Versilia</title>
+  <meta name="description" content="ETAL CASA PULITA — servizi di pulizia professionale per ville, hotel e appartamenti in Versilia. Qualità, affidabilità, esperienza. Prezzi da 15€/h." />
+  <style>
+    :root{ --indigo:#3b3dbf; --deep:#0e2a22; --mint:#d8f3e8; --ink:#0a0f14; --card:#0f1b23; --text:#eef3f6; --sub:#a8b6c2; --accent:#1c7d6e; --ring: rgba(59,61,191,.35);} *{box-sizing:border-box}
+    html,body{height:100%}
+    body{ margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif; color:var(--text); background: radial-gradient(1200px 700px at 10% -10%, rgba(59,61,191,.18), transparent 70%), radial-gradient(900px 600px at 120% 10%, rgba(28,125,110,.2), transparent 70%), linear-gradient(180deg, #0a1217, #0b1419 40%, #0a1116); }
+    a{color:var(--mint); text-decoration:none}
+    .container{max-width:1200px; margin:0 auto; padding:0 20px}
+    header{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px); background:linear-gradient(180deg, rgba(10,17,22,.9), rgba(10,17,22,.35)); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:36px; height:36px; border-radius:10px; background: conic-gradient(from 180deg at 50% 50%, var(--indigo), var(--accent), var(--indigo)); box-shadow:0 0 0 4px rgba(59,61,191,.12), 0 10px 30px rgba(0,0,0,.35); position:relative}
+    .logo::after{content:""; position:absolute; inset:4px; border-radius:8px; background: radial-gradient(60% 60% at 30% 25%, rgba(255,255,255,.7), rgba(255,255,255,.1) 40%, rgba(255,255,255,0) 60%)}
+    .brand h1{margin:0; font-size:18px; letter-spacing:.3px}
+    .lang{display:flex; gap:8px}
+    .chip{border:1px solid rgba(255,255,255,.12); padding:6px 10px; border-radius:999px; cursor:pointer; font-size:13px; color:var(--sub); background:#0c141a}
+    .chip.active{border-color:var(--ring); box-shadow:0 0 0 3px var(--ring); color:#fff}
+    .hero{position:relative; overflow:hidden}
+    .hero .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; padding:72px 0 36px}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid rgba(255,255,255,.12); border-radius:999px; font-size:13px; color:var(--sub); background:linear-gradient(180deg, rgba(15,27,35,.9), rgba(15,27,35,.6))}
+    .pulse{width:8px;height:8px;border-radius:50%;background:var(--accent); box-shadow:0 0 0 0 rgba(28,125,110,.7); animation:pulse 2.2s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(28,125,110,.7)}70%{box-shadow:0 0 0 14px rgba(28,125,110,0)}100%{box-shadow:0 0 0 0 rgba(28,125,110,0)}}
+    h2{font-size:44px; line-height:1.1; margin:14px 0 10px}
+    p.lead{font-size:18px; color:var(--sub); margin:0 0 20px}
+    .cta{display:flex; gap:12px; margin-top:8px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:14px; border:1px solid rgba(255,255,255,.12); cursor:pointer; font-weight:600; transition:.25s transform, .25s box-shadow}
+    .btn.primary{background:linear-gradient(180deg, var(--indigo), #2a2ca2); border-color:transparent}
+    .btn.primary:hover{transform:translateY(-1px); box-shadow:0 12px 30px rgba(59,61,191,.35)}
+    .btn.ghost:hover{border-color:var(--ring)}
+    .glass{border-radius:18px; background:linear-gradient(180deg, rgba(15,27,35,.6), rgba(15,27,35,.3)); border:1px solid rgba(255,255,255,.06); box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card{padding:22px}
+    .grid{display:grid; gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .section{padding:48px 0}
+    .section h3{font-size:28px; margin:0 0 12px}
+    .muted{color:var(--sub)}
+    .price{font-size:40px; font-weight:800}
+    .price small{font-weight:600; color:var(--sub)}
+    .contact{display:grid; grid-template-columns:1.2fr .8fr; gap:22px}
+    label{display:block; font-size:13px; color:var(--sub); margin-bottom:6px}
+    input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.1); background:#0c141a; color:#fff}
+    textarea{min-height:120px; resize:vertical}
+    footer{padding:28px 0; color:var(--sub); border-top:1px solid rgba(255,255,255,.06)}
+    .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.visible{opacity:1; transform:none}
+    @media (max-width:980px){ .hero .wrap{grid-template-columns:1fr; padding-top:46px} .grid.cols-3{grid-template-columns:1fr} .grid.cols-2{grid-template-columns:1fr} .contact{grid-template-columns:1fr} h2{font-size:36px} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>ETAL CASA PULITA</h1>
+      </div>
+      <div class="lang" aria-label="Language switcher">
+        <button class="chip active" data-lang="it">IT</button>
+        <button class="chip" data-lang="ru">RU</button>
+        <button class="chip" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="badge"><span class="pulse"></span><span data-i18n="badge">Qualità garantita — Esperienza comprovata</span></span>
+          <h2 data-i18n="title">Pulizie professionali per ville, hotel e appartamenti in Versilia</h2>
+          <p class="lead" data-i18n="subtitle">Affidabilità, discrezione e standard elevati. Lavoriamo con cura artigianale e tecnologia moderna.</p>
+          <div class="cta">
+            <a href="#contact" class="btn primary" data-i18n="cta_primary">Richiedi preventivo</a>
+            <a href="#services" class="btn ghost" data-i18n="cta_secondary">I nostri servizi</a>
+            <a class="btn ghost" href="https://wa.me/393317349649?text=Ciao!%20Vorrei%20richiedere%20un%20preventivo%20per%20le%20pulizie%20(ETAL%20CASA%20PULITA)." target="_blank" rel="noopener" aria-label="WhatsApp"><span data-i18n="cta_whatsapp">WhatsApp</span></a>
+          </div>
+        </div>
+        <div class="glass card">
+          <div class="grid cols-2">
+            <div>
+              <h3 style="margin:0" data-i18n="price_title">Prezzo</h3>
+              <div class="price">15€<small>/h da</small></div>
+              <p class="muted" data-i18n="price_note">Tariffa base, stiro e lavanderia — a parte secondo il volume.</p>
+            </div>
+            <div>
+              <h3 style="margin:0" data-i18n="xp_title">Perché noi</h3>
+              <ul class="muted" style="margin:6px 0 0 16px; line-height:1.6">
+                <li data-i18n="xp_1">Grande esperienza e qualità controllata</li>
+                <li data-i18n="xp_2">Team fidato, formato per ville di lusso</li>
+                <li data-i18n="xp_3">Arrivo puntuale e materiali professionali</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container grid cols-3">
+        <div class="glass card reveal">
+          <h3 data-i18n="about_title">О компании</h3>
+          <p class="muted" data-i18n="about_text">Мы — ETAL CASA PULITA. У нас огромный опыт в клининге вилл, апартаментов и отелей. Мы строго контролируем качество, работаем аккуратно и конфиденциально, соблюдая высокие стандарты сервиса.</p>
+        </div>
+        <div class="glass card reveal">
+          <h3 data-i18n="coverage_title">Зона работы</h3>
+          <p class="muted" data-i18n="coverage_text">Forte dei Marmi, Pietrasanta, Viareggio и вся Версилия. Возможны выезды по договорённости.</p>
+        </div>
+        <div class="glass card reveal">
+          <h3 data-i18n="guarantee_title">Гарантии</h3>
+          <p class="muted" data-i18n="guarantee_text">Фиксированный чек-лист, бережное обращение с материалами (мрамор, дерево, стекло), финальная проверка качества и фото-отчёт по запросу.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h3 style="margin-bottom:14px" data-i18n="services_title">Servizi principali</h3>
+        <div class="grid cols-3">
+          <div class="glass card reveal">
+            <h4 data-i18n="s1">Pulizia ordinaria e profonda</h4>
+            <p class="muted" data-i18n="s1t">Cucine, bagni, camere, vetri; sanificazione punti contatto; cambio biancheria.</p>
+            <ul class="muted" style="margin:8px 0 0 18px; line-height:1.6">
+              <li data-i18n="s1a1">Индивидуальный чек‑лист</li>
+              <li data-i18n="s1a2">Эко‑средства по возможности</li>
+              <li data-i18n="s1a3">Фото‑отчёт по запросу</li>
+            </ul>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="s2">Ville & ospitalità</h4>
+            <p class="muted" data-i18n="s2t">Preparazione check‑in/check‑out, ripristino set cortesia, supporto property management.</p>
+            <ul class="muted" style="margin:8px 0 0 18px; line-height:1.6">
+              <li data-i18n="s2a1">Turnover: бельё, amenities</li>
+              <li data-i18n="s2a2">Контроль повреждений и расходников</li>
+              <li data-i18n="s2a3">Ресток базовых средств</li>
+            </ul>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="s3">Lavanderia / stiro</h4>
+            <p class="muted" data-i18n="s3t">Стирка и глажка белья рассчитываются отдельно в зависимости от объёма.</p>
+            <ul class="muted" style="margin:8px 0 0 18px; line-height:1.6">
+              <li data-i18n="s3a1">По кг или по комплектам</li>
+              <li data-i18n="s3a2">Упаковка и маркировка</li>
+              <li data-i18n="s3a3">Экспресс по договорённости</li>
+            </ul>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="s4">Pietre naturali</h4>
+            <p class="muted" data-i18n="s4t">Деликатный уход за мрамором и камнем: pH‑нейтральные средства, защита поверхностей.</p>
+            <ul class="muted" style="margin:8px 0 0 18px; line-height:1.6">
+              <li data-i18n="s4a1">Тест в скрытой зоне</li>
+              <li data-i18n="s4a2">Импрегнация/защита по запросу</li>
+            </ul>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="s5">Vetri e vetrate</h4>
+            <p class="muted" data-i18n="s5t">Кристальная чистота панорамных окон и душевых кабин.</p>
+            <ul class="muted" style="margin:8px 0 0 18px; line-height:1.6">
+              <li data-i18n="s5a1">Оценка высотных работ</li>
+              <li data-i18n="s5a2">Анти‑капля по запросу</li>
+            </ul>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="s6">Servizi extra</h4>
+            <p class="muted" data-i18n="s6t">Сезонная подготовка объектов, мелкие хозяйственные задачи по договорённости.</p>
+            <ul class="muted" style="margin:8px 0 0 18px; line-height:1.6">
+              <li data-i18n="s6a1">Закупки расходников</li>
+              <li data-i18n="s6a2">Микро‑организация хранения</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <h3 style="margin-bottom:14px" data-i18n="pricing_title">Тарифы</h3>
+        <div class="grid cols-3">
+          <div class="glass card reveal">
+            <h4 data-i18n="p1">Почасовая работа</h4>
+            <p class="price">15€<small>/h</small></p>
+            <p class="muted" data-i18n="p1t">Базовая ставка. Минимум 3 часа. Материалы заказчика или по согласованию наши.</p>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="p2">Генеральная уборка</h4>
+            <p class="price">da 18€<small>/h</small></p>
+            <p class="muted" data-i18n="p2t">Глубокая очистка швов, кухни, ванных. Составляется чек‑лист и смета на объект.</p>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="p3">Turnover (виллы/аренда)</h4>
+            <p class="price">su preventivo</p>
+            <p class="muted" data-i18n="p3t">Подготовка к заезду/выезду, смена белья, инвентаризация. Цена зависит от метража и требований.</p>
+          </div>
+        </div>
+        <div class="grid cols-3" style="margin-top:12px">
+          <div class="glass card reveal">
+            <h4 data-i18n="p4">Окна и витражи</h4>
+            <p class="muted" data-i18n="p4t">Помесячно или разово. Высотные работы — по осмотру.</p>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="p5">Мрамор/камень</h4>
+            <p class="muted" data-i18n="p5t">Деликатный уход, средства и защита — отдельно, по материалам.</p>
+          </div>
+          <div class="glass card reveal">
+            <h4 data-i18n="p6">Стирка/глажка</h4>
+            <p class="muted" data-i18n="p6t">Рассчитывается отдельно: по кг или комплектам, согласно объёму.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div class="glass card reveal">
+          <h3 style="margin:0 0 10px" data-i18n="contact_title">Связаться с нами</h3>
+          <p class="muted" style="margin:0 0 12px" data-i18n="contact_text">Оставьте запрос — ответим быстро и предложим решение под вашу задачу.</p>
+          <form id="contactForm" aria-label="Contact form">
+            <label data-i18n="f_name">Ваше имя</label>
+            <input id="f_name" name="name" required placeholder="Sergey" />
+            <label data-i18n="f_phone">Телефон (для связи)</label>
+            <input id="f_phone" name="phone" required placeholder="3317349649" />
+            <label data-i18n="f_msg">Сообщение</label>
+            <textarea id="f_msg" name="message" placeholder="Тип объекта, адрес, желаемая дата"></textarea>
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+              <button class="btn primary" type="submit" data-i18n="f_send">Отправить</button>
+              <a class="btn ghost" href="tel:+393317349649" aria-label="Call"><span data-i18n="call">Позвонить: 3317349649 (Сергей)</span></a>
+              <a class="btn ghost" href="https://wa.me/393317349649?text=Ciao!%20Vorrei%20un%20preventivo%20(ETAL%20CASA%20PULITA)." target="_blank" rel="noopener" aria-label="WhatsApp"><span data-i18n="cta_whatsapp">WhatsApp</span></a>
+            </div>
+          </form>
+        </div>
+        <div class="glass card reveal">
+          <h4 style="margin:0 0 8px">ETAL CASA PULITA</h4>
+          <p class="muted" style="margin:4px 0 14px" data-i18n="tag">Cleaning & Services — Forte dei Marmi · Versilia</p>
+          <div class="glass card" style="padding:14px; background:linear-gradient(180deg, rgba(59,61,191,.1), rgba(28,125,110,.08));">
+            <p style="margin:0; line-height:1.7">
+              <strong data-i18n="contact_person">Контактное лицо:</strong> Sergey<br />
+              <strong data-i18n="contact_phone">Телефон:</strong> 3317349649<br />
+              <strong data-i18n="contact_hours">График:</strong> <span data-i18n="hours">ежедневно 9:00–19:00</span>
+            </p>
+          </div>
+          <p class="muted" style="margin-top:12px" data-i18n="gdpr">Мы используем данные запроса только для обратной связи и расчёта услуги.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> ETAL CASA PULITA — <span data-i18n="footer">профессиональный клининг в Версилии. Все права защищены.</span>
+    </div>
+  </footer>
+
+  <script>
+    const MAIL_TO = 'sergreviuc@gmail.com';
+    const i18n = {
+      it:{
+        badge:"Qualità garantita — Esperienza comprovata",
+        title:"Pulizie professionali per ville, hotel e appartamenti in Versilia",
+        subtitle:"Affidabilità, discrezione e standard elevati. Lavoriamo con cura artigianale e tecnologia moderna.",
+        cta_primary:"Richiedi preventivo", cta_secondary:"I nostri servizi", cta_whatsapp:"WhatsApp",
+        price_title:"Prezzo", price_note:"Tariffa base, stiro e lavanderia — a parte secondo il volume.",
+        xp_title:"Perché noi", xp_1:"Grande esperienza e qualità controllata", xp_2:"Team fidato, formato per ville di lusso", xp_3:"Arrivo puntuale e materiali professionali",
+        about_title:"Chi siamo", about_text:"Siamo ETAL CASA PULITA. Abbiamo una grande esperienza nelle pulizie di ville, appartamenti e hotel. Monitoriamo severamente la qualità, lavoriamo con cura e riservatezza, mantenendo standard elevati.",
+        coverage_title:"Area di lavoro", coverage_text:"Forte dei Marmi, Pietrasanta, Viareggio e tutta la Versilia. Trasferte su accordo.",
+        guarantee_title:"Garanzie", guarantee_text:"Checklist fisso, cura dei materiali (marmo, legno, vetro), controllo qualità finale e report fotografico su richiesta.",
+        services_title:"Servizi principali",
+        s1:"Pulizia ordinaria e profonda", s1t:"Cucine, bagni, camere, vetri; sanificazione punti contatto; cambio biancheria.", s1a1:"Checklist personalizzato", s1a2:"Prodotti eco ove possibile", s1a3:"Report fotografico su richiesta",
+        s2:"Ville & ospitalità", s2t:"Preparazione check‑in/check‑out, set cortesia, supporto property management.", s2a1:"Turnover day: biancheria, amenities", s2a2:"Controllo danni e consumi", s2a3:"Rifornimento base su richiesta",
+        s3:"Lavanderia / stiro", s3t:"Lavaggio e stiratura biancheria si calcolano a parte in base al volume.", s3a1:"A kg o per set", s3a2:"Confezionamento e etichettatura", s3a3:"Express su accordo",
+        s4:"Pietre naturali", s4t:"Cura delicata del marmo e della pietra: prodotti pH‑neutri, protezione superfici.", s4a1:"Test in zona nascosta", s4a2:"Impermeabilizzazione su richiesta",
+        s5:"Vetri e vetrate", s5t:"Massima trasparenza per finestre panoramiche e box doccia.", s5a1:"Valutazione lavori in quota", s5a2:"Trattamento anti‑goccia su richiesta",
+        s6:"Servizi extra", s6t:"Preparazione stagionale, piccole commissioni su accordo.", s6a1:"Acquisto consumabili", s6a2:"Micro‑organizzazione ripostigli",
+        pricing_title:"Listino",
+        p1:"Lavoro a ore", p1t:"Tariffa base. Minimo 3 ore. Materiali del cliente o nostri su accordo.",
+        p2:"Pulizia profonda", p2t:"Sgrassaggio profondo, cucine e bagni. Checklist e preventivo su sopralluogo.",
+        p3:"Turnover ville/locazioni", p3t:"Check‑in/out, biancheria, inventario. Prezzo in base a metratura e richieste.",
+        p4:"Vetri e vetrate", p4t:"Periodico o una tantum. Lavori in quota su valutazione.",
+        p5:"Marmo/pietra", p5t:"Cura e protezione; materiali dedicati a parte.",
+        p6:"Lavanderia/stiro", p6t:"A parte: a kg o per set, secondo volume.",
+        contact_title:"Contatti", contact_text:"Lascia la tua richiesta — risponderemo rapidamente con una proposta su misura.",
+        f_name:"Il tuo nome", f_phone:"Telefono (per ricontatto)", f_msg:"Messaggio", f_send:"Invia",
+        or:"oppure", call:"Chiamare: 3317349649 (Sergey)", tag:"Cleaning & Services — Forte dei Marmi · Versilia",
+        contact_person:"Referente:", contact_phone:"Telefono:", contact_hours:"Orari:", hours:"tutti i giorni 9:00–19:00",
+        gdpr:"Utilizziamo i dati solo per ricontatto e preventivo.", footer:"pulizie professionali in Versilia. Tutti i diritti riservati.", thanks:"Grazie! Ti contatteremo al più presto."
+      },
+      ru:{
+        badge:"Гарантированное качество — подтверждённый опыт",
+        title:"Профессиональная уборка вилл, отелей и апартаментов в Версилии",
+        subtitle:"Надёжность, конфиденциальность и высокие стандарты. Работаем аккуратно и современно.",
+        cta_primary:"Запросить смету", cta_secondary:"Наши услуги", cta_whatsapp:"WhatsApp",
+        price_title:"Цена", price_note:"Базовая ставка, стирка и глажка — отдельно в зависимости от объёма.",
+        xp_title:"Почему мы", xp_1:"Огромный опыт и контроль качества", xp_2:"Надёжная команда, обученная работе на виллах", xp_3:"Пунктуальность и проф. материалы",
+        about_title:"О компании", about_text:"Мы — ETAL CASA PULITA. У нас огромный опыт в клининге вилл, апартаментов и отелей. Мы строго контролируем качество, работаем аккуратно и конфиденциально, соблюдая высокие стандарты сервиса.",
+        coverage_title:"Зона работы", coverage_text:"Forte dei Marmi, Pietrasanta, Viareggio и вся Версилия. Возможны выезды по договорённости.",
+        guarantee_title:"Гарантии", guarantee_text:"Фиксированный чек‑лист, бережный уход за материалами (мрамор, дерево, стекло), финальная проверка и фото‑отчёт по запросу.",
+        services_title:"Основные услуги",
+        s1:"Ежедневная и генеральная уборка", s1t:"Кухни, ванные, комнаты, стёкла; санобработка точек касания; смена белья.", s1a1:"Индивидуальный чек‑лист", s1a2:"Эко‑средства по возможности", s1a3:"Фото‑отчёт по запросу",
+        s2:"Виллы и гостеприимство", s2t:"Подготовка check‑in/check‑out, наборы гостеприимства, поддержка property‑management.", s2a1:"Turnover‑день: бельё, amenities", s2a2:"Контроль повреждений и расходников", s2a3:"Базовые закупки по запросу",
+        s3:"Стирка и глажка", s3t:"Рассчитываются отдельно по объёму.", s3a1:"По кг или по комплектам", s3a2:"Отдельная упаковка и маркировка", s3a3:"Экспресс по договорённости",
+        s4:"Натуральный камень", s4t:"Деликатный уход за мрамором и камнем, pH‑нейтральные средства.", s4a1:"Тест в скрытой зоне", s4a2:"Импрегнация/защита по запросу",
+        s5:"Мытьё стекол", s5t:"Панорамные окна и душевые.", s5a1:"Оценка высотных работ", s5a2:"Анти‑капля по запросу",
+        s6:"Дополнительные услуги", s6t:"Сезонная подготовка, мелкие хозяйственные задачи.", s6a1:"Закупка расходников", s6a2:"Организация хранения",
+        pricing_title:"Тарифы",
+        p1:"Почасовая работа", p1t:"Базовая ставка. Минимум 3 часа. Материалы заказчика или по согласованию наши.",
+        p2:"Генеральная уборка", p2t:"Глубокая очистка кухни/ванн. Чек‑лист и смета по осмотру.",
+        p3:"Turnover (виллы/аренда)", p3t:"Подготовка к заезду/выезду, бельё, инвентаризация. Цена зависит от метража и требований.",
+        p4:"Окна и витражи", p4t:"Помесячно или разово. Высотные работы — по осмотру.",
+        p5:"Мрамор/камень", p5t:"Деликатный уход и защита. Материалы отдельно.",
+        p6:"Стирка/глажка", p6t:"Отдельно: по кг или комплектам, по объёму.",
+        contact_title:"Связаться с нами", contact_text:"Оставьте запрос — ответим быстро и предложим решение под вашу задачу.",
+        f_name:"Ваше имя", f_phone:"Телефон (для связи)", f_msg:"Сообщение", f_send:"Отправить",
+        or:"или", call:"Позвонить: 3317349649 (Сергей)", tag:"Cleaning & Services — Forte dei Marmi · Versilia",
+        contact_person:"Контактное лицо:", contact_phone:"Телефон:", contact_hours:"График:", hours:"ежедневно 9:00–19:00",
+        gdpr:"Мы используем данные только для связи и расчёта услуги.", footer:"профессиональный клининг в Версилии. Все права защищены.", thanks:"Спасибо! Мы свяжемся с вами в ближайшее время."
+      },
+      en:{
+        badge:"Guaranteed quality — Proven experience",
+        title:"Professional cleaning for villas, hotels and apartments in Versilia",
+        subtitle:"Reliability, discretion and high standards. Hand‑crafted care with modern tools.",
+        cta_primary:"Get a quote", cta_secondary:"Our services", cta_whatsapp:"WhatsApp",
+        price_title:"Price", price_note:"Base rate; laundry & ironing are billed separately by volume.",
+        xp_title:"Why us", xp_1:"Extensive experience & quality control", xp_2:"Trusted team trained for luxury villas", xp_3:"On‑time arrival & pro‑grade supplies",
+        about_title:"About", about_text:"We are ETAL CASA PULITA. We have vast experience cleaning villas, apartments and hotels. We enforce strict quality control and work discreetly to premium standards.",
+        coverage_title:"Coverage", coverage_text:"Forte dei Marmi, Pietrasanta, Viareggio and the whole Versilia area. Other locations upon agreement.",
+        guarantee_title:"Guarantees", guarantee_text:"Fixed checklist, careful handling of materials (marble, wood, glass), final QA and photo report on request.",
+        services_title:"Key services",
+        s1:"Regular & deep cleaning", s1t:"Kitchens, bathrooms, rooms, glass; touch‑point sanitizing; linen change.", s1a1:"Personalized checklist", s1a2:"Eco products when possible", s1a3:"Photo report on request",
+        s2:"Villas & hospitality", s2t:"Check‑in/out prep, amenity reset, property‑management support.", s2a1:"Turnover day: linen & amenities", s2a2:"Damage & supply control", s2a3:"Basic restocking on request",
+        s3:"Laundry / ironing", s3t:"Billed separately depending on volume.", s3a1:"Per kg or per set", s3a2:"Individual packing & labeling", s3a3:"Express by agreement",
+        s4:"Natural stone", s4t:"Delicate marble & stone care with pH‑neutral products.", s4a1:"Patch test in hidden area", s4a2:"Sealing on request",
+        s5:"Windows & glass", s5t:"Crystal‑clear panoramic windows and shower cabins.", s5a1:"Assessment for high‑reach work", s5a2:"Anti‑drop treatment on request",
+        s6:"Extras", s6t:"Seasonal prep, small household tasks by agreement.", s6a1:"Consumables shopping", s6a2:"Storage micro‑organization",
+        pricing_title:"Pricing",
+        p1:"Hourly work", p1t:"Base rate. Minimum 3 hours. Client’s materials or ours by agreement.",
+        p2:"Deep clean", p2t:"Heavy‑duty kitchen/bath detailing. Checklist & quote after site visit.",
+        p3:"Villa/holiday turnover", p3t:"Check‑in/out prep, linen, inventory. Price depends on size & requirements.",
+        p4:"Windows & glazing", p4t:"Periodic or one‑off. High‑reach after assessment.",
+        p5:"Marble/stone", p5t:"Delicate care and protection; dedicated products billed separately.",
+        p6:"Laundry/ironing", p6t:"Billed separately: per kg or per set, based on volume.",
+        contact_title:"Contact us", contact_text:"Send your request — we’ll reply quickly with a tailored solution.",
+        f_name:"Your name", f_phone:"Phone (for callback)", f_msg:"Message", f_send:"Send",
+        or:"or", call:"Call: +39 331 734 9649 (Sergey)", tag:"Cleaning & Services — Forte dei Marmi · Versilia",
+        contact_person:"Contact person:", contact_phone:"Phone:", contact_hours:"Hours:", hours:"daily 09:00–19:00",
+        gdpr:"We use your data only to reply and prepare a quote.", footer:"professional cleaning in Versilia. All rights reserved.", thanks:"Thank you! We will get back to you shortly."
+      }
+    };
+
+    let current = 'it';
+    const $ = s => document.querySelector(s); const $$ = s => document.querySelectorAll(s);
+    function applyLang(lang){ current = lang; $$('.chip').forEach(c=>c.classList.toggle('active', c.dataset.lang===lang)); const dict = i18n[lang]; Object.keys(dict).forEach(k=>{ document.querySelectorAll('[data-i18n="'+k+'"]').forEach(n=> n.textContent = dict[k]);}); document.documentElement.lang = lang; }
+    $$('.chip').forEach(btn=> btn.addEventListener('click',()=> applyLang(btn.dataset.lang)));
+    const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} }); },{threshold:.18}); $$('.reveal').forEach(el=> io.observe(el));
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // simple mailto sender (no backend)
+    const form = document.getElementById('contactForm');
+    if(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = encodeURIComponent(document.getElementById('f_name').value || '');
+        const phone = encodeURIComponent(document.getElementById('f_phone').value || '');
+        const msg = encodeURIComponent(document.getElementById('f_msg').value || '');
+        const subject = encodeURIComponent('Richiesta preventivo — ETAL CASA PULITA');
+        const body = encodeURIComponent(`Nome/Name: ${name}\nTelefono/Phone: ${phone}\nMessaggio/Message:\n${msg}`);
+        const link = `mailto:${MAIL_TO}?subject=${subject}&body=${body}`;
+        window.location.href = link;
+        alert(i18n[current].thanks);
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>
